@@ -1,4 +1,4 @@
-# **Detailed README**
+# **README -> COMPUTATIONAL THEORY**
 
 This repository contains a set of Python scripts and functions that address four main tasks involving **bitwise operations**, **hash functions**, **SHA-256 padding**, and **prime-number computation**. Each task is described in detail below, along with references, test procedures, and example usage.
 
@@ -10,3 +10,9 @@ This repository contains a set of Python scripts and functions that address four
 3. Task 3: SHA-256 Padding Calculation
 
 4. Task 4: Calculating the First 100 Prime Numbers
+
+5. Task 5: Extracting 32 Bits of Fractional Parts of Square Roots for the First 100 Primes
+
+6. Task 6: Finding Words with Maximum Leading Zero Bits in Their SHA256 Hash 
+
+7. Task 7: Turing Machines
