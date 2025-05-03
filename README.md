@@ -16,3 +16,21 @@ This repository contains a set of Python scripts and functions that address four
 6. Task 6: Finding Words with Maximum Leading Zero Bits in Their SHA256 Hash 
 
 7. Task 7: Turing Machines
+
+8. References
+
+## Task 1: Binary Representation (32-bit Bitwise Operations)
+
+## Task 2: Kernighan and Ritchie Hash Function
+
+## Task 3: SHA-256 Padding Calculation
+
+## Task 4: Calculating the First 100 Prime Numbers
+
+## Task 5: Extracting 32 Bits of Fractional Parts of Square Roots for the First 100 Primes
+
+## Task 6: Finding Words with Maximum Leading Zero Bits in Their SHA256 Hash 
+
+## Task 7: Turing Machines
+
+## References
