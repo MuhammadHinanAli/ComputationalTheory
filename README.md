@@ -1,4 +1,4 @@
-# **README -> COMPUTATIONAL THEORY**
+# **COMPUTATIONAL THEORY**
 
 This repository contains a set of Python scripts and functions that address four main tasks involving **bitwise operations**, **hash functions**, **SHA-256 padding**, and **prime-number computation**. Each task is described in detail below, along with references, test procedures, and example usage.
 
