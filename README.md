@@ -17,7 +17,9 @@ This repository contains a set of Python scripts and functions that address four
 
 7. Task 7: Turing Machines
 
-8. References
+8. Task 8: Computational Complexity
+
+9. References
 
 ## Task 1: Binary Representation (32-bit Bitwise Operations)
 
@@ -32,5 +34,7 @@ This repository contains a set of Python scripts and functions that address four
 ## Task 6: Finding Words with Maximum Leading Zero Bits in Their SHA256 Hash 
 
 ## Task 7: Turing Machines
+
+## Task 8: Computational Complexity
 
 ## References
