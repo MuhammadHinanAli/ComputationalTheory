@@ -26,6 +26,24 @@ This repository contains a set of Python scripts and functions that address four
 ## Task 2: Kernighan and Ritchie Hash Function
 
 ## Task 3: SHA-256 Padding Calculation
+### Overview
+This task demonstrates how **SHA-256 padding** is computed for a given file, following the padding rules defined in the SHA-256 specification (part of the SHA-2 family). It outputs the padding bytes in hexadecimal format for a better understanding of how data is prepared before hashing.
+In SHA-256, before the hashing algorithm processes the input data, it must be padded so that the total length is a multiple of 512 bits (64 bytes). The padding process includes:
+- Appending a single `1` bit (as `0x80`)
+- Adding `0` bits (as null bytes) so that the total length becomes congruent to 56 mod 64
+- Finally, appending the original message length in bits as a 64-bit big-endian integer
+
+This task calculates and prints the exact padding that would be added to any file before applying the SHA-256 compression function.
+
+### Key Features
+
+- Reads binary content from any file
+- Computes proper SHA-256 padding according to specification
+- Displays padding bytes in human-readable hex format
+- Includes a test example with `"abc"` content and cleans up the test file
+
+### Requirements
+- No external libraries needed
 
 ## Task 4: Calculating the First 100 Prime Numbers
 ### Overview
@@ -39,7 +57,7 @@ It calculates and prints the first 100 prime numbers using both approaches.
 
 ---
 
-## 🔢 Features
+### Features
 
 - **Trial Division**: Checks each number for primality by testing divisibility up to its square root.
 - **Sieve of Eratosthenes**: Efficiently finds all primes up to a given range by marking non-primes.
@@ -47,9 +65,9 @@ It calculates and prints the first 100 prime numbers using both approaches.
 
 ---
 
-## 📌 Code Overview
+### Code Overview
 
-### ✅ Prime Check (Trial Division)
+####  Prime Check (Trial Division)
 
 ```python
 def is_prime(n):
@@ -61,7 +79,7 @@ def is_prime(n):
     return True
 ```
 
-### 🧮 Generate Primes via Trial Division
+#### Generate Primes via Trial Division
 
 ```python
 def primes_trial_division(limit):
@@ -74,7 +92,7 @@ def primes_trial_division(limit):
     return primes
 ```
 
-### 🔍 Generate Primes via Sieve of Eratosthenes
+#### Generate Primes via Sieve of Eratosthenes
 
 ```python
 def sieve_of_eratosthenes(n):
@@ -91,21 +109,21 @@ def sieve_of_eratosthenes(n):
 
 ---
 
-## 🖨 Output Example
+### Output Example
 
 ```python
 print("Trial Division:\n", primes_trial_division(100))
 print("\nSieve of Eratosthenes:\n", sieve_of_eratosthenes(100))
 ```
 
-## ✅ Comparison Summary
+### Comparison Summary
 
 | Method               | Time Complexity  | Description                      |
 |----------------------|------------------|----------------------------------|
 | Trial Division       | O(n√n)           | Simple but slower for large `n`  |
 | Sieve of Eratosthenes| O(n log log n)   | Fast for large ranges            |
 
-## 📦 Requirements
+### Requirements
 - No external libraries
 
 ## Task 5: Extracting 32 Bits of Fractional Parts of Square Roots for the First 100 Primes
