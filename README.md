@@ -59,10 +59,7 @@ The **majority** function, which selects the majority bit value from inputs `x`,
 - Logic: `(x & y) | (x & z) | (y & z)`
 - Helps increase diffusion in hash functions
 
----
-
 ### Test Cases
-
 Each function includes test cases in the `__main__` block:
 
 ### `rotl` and `rotr`
