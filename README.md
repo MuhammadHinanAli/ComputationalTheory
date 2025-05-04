@@ -2,27 +2,18 @@
 The tasks and functions in this repository cover four primary tasks: **prime-number computation**, **hash functions**, **SHA-256 padding** and **bitwise operations**. Below is a detailed description of each task, with references, test methods, and usage examples.
 
 ## **Table of Contents**
-1. Task 1: Binary Representation (32-bit Bitwise Operations)
-
-2. Task 2: Kernighan and Ritchie Hash Function
-
-3. Task 3: SHA-256 Padding Calculation
-
-4. Task 4: Calculating the First 100 Prime Numbers
-
-5. Task 5: Extracting 32 Bits of Fractional Parts of Square Roots for the First 100 Primes
-
-6. Task 6: Finding Words with Maximum Leading Zero Bits in Their SHA256 Hash 
-
-7. Task 7: Turing Machines
-
-8. Task 8: Computational Complexity
-
-9. References
+1. [Task 1: Binary Representation (32-bit Bitwise Operations)](#task-1-binary-representation-32-bit-bitwise-operations)
+2. [Task 2: Kernighan and Ritchie Hash Function](#task-2-kernighan-and-ritchie-hash-function)
+3. [Task 3: SHA-256 Padding Calculation](#task-3-sha-256-padding-calculation)
+4. [Task 4: Calculating the First 100 Prime Numbers](#task-4-calculating-the-first-100-prime-numbers)
+5. [Task 5: Extracting 32 Bits of Fractional Parts of Square Roots for the First 100 Primes](#task-5-extracting-32-bits-of-fractional-parts-of-square-roots-for-the-first-100-primes)
+6. [Task 6: Finding Words with Maximum Leading Zero Bits in Their SHA256 Hash](#task-6-finding-words-with-maximum-leading-zero-bits-in-their-sha256-hash)
+7. [Task 7: Turing Machines](#task-7-turing-machines)
+8. [Task 8: Computational Complexity](#task-8-computational-complexity)
+9. [References](#references)
 
 ## Task 1: Binary Representation (32-bit Bitwise Operations)
 ### Overview
-
 This task implements and tests four essential bitwise operations commonly used in systems programming:
 
 - **Left Rotate (`rotl`)**
@@ -39,7 +30,7 @@ Performs a left circular rotation on the 32-bit integer `x` by `n` positions.
 
 - Uses: `((x << n) | (x >> (32 - n))) & 0xFFFFFFFF`
 - Handles overflow with bitmasking (`& 0xFFFFFFFF`)
-- `n` is normalized using modulo 32
+- `n` is normalised using modulo 32
 
 #### `rotr(x, n=1)`
 Performs a right circular rotation on the 32-bit integer `x` by `n` positions.
