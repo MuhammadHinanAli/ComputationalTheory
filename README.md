@@ -21,6 +21,63 @@ The tasks and functions in this repository cover four primary tasks: **prime-num
 9. References
 
 ## Task 1: Binary Representation (32-bit Bitwise Operations)
+### Overview
+
+This task implements and tests four essential bitwise operations commonly used in systems programming:
+
+- **Left Rotate (`rotl`)**
+- **Right Rotate (`rotr`)**
+- **Choose (`ch`)**
+- **Majority (`maj`)**
+
+These functions operate on 32-bit unsigned integers and are fundamental building blocks in algorithms like SHA-1, SHA-256, and other cryptographic hash functions. All operations include masking and modular arithmetic to ensure correctness and handle edge cases safely.
+
+### Functions and Descriptions
+
+#### `rotl(x, n=1)`
+Performs a left circular rotation on the 32-bit integer `x` by `n` positions.
+
+- Uses: `((x << n) | (x >> (32 - n))) & 0xFFFFFFFF`
+- Handles overflow with bitmasking (`& 0xFFFFFFFF`)
+- `n` is normalized using modulo 32
+
+#### `rotr(x, n=1)`
+Performs a right circular rotation on the 32-bit integer `x` by `n` positions.
+
+- Uses: `((x >> n) | (x << (32 - n))) & 0xFFFFFFFF`
+- Ensures output remains a valid 32-bit unsigned integer
+
+#### `ch(x, y, z)`
+The **choose** function, which selects bits from `y` or `z` based on the value of `x`.
+
+- Logic: `(x & y) | (~x & z)`
+- Common in cryptographic algorithms for conditional logic
+
+#### `maj(x, y, z)`
+The **majority** function, which selects the majority bit value from inputs `x`, `y`, and `z`.
+
+- Logic: `(x & y) | (x & z) | (y & z)`
+- Helps increase diffusion in hash functions
+
+---
+
+### Test Cases
+
+Each function includes test cases in the `__main__` block:
+
+### `rotl` and `rotr`
+- Rotation by standard values (e.g., 4)
+- Rotation by 0 (should return original)
+- Rotation by 32 and values >32 (normalized with `% 32`)
+
+### `ch` and `maj`
+- Inputs include:
+  - All 1s or 0s
+  - Mixed bit patterns
+  - Logical validation through binary representation
+
+### Requirements
+- No external dependencies
 
 ## Task 2: Kernighan and Ritchie Hash Function
 ### Overview
