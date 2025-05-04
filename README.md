@@ -23,6 +23,14 @@ The tasks and functions in this repository cover four primary tasks: **prime-num
 ## Task 1: Binary Representation (32-bit Bitwise Operations)
 
 ## Task 2: Kernighan and Ritchie Hash Function
+### Overview
+This task implements a simple **Kernighan & Ritchie (K&R)** style hash function, widely known for its use in early C programming language utilities. It demonstrates how a basic hash function can be used to map strings to numeric values using a polynomial rolling technique. The `kr_hash` function hashes a string by iterating through each character, multiplying the current hash value by 31, and then adding the ASCII value of the character. The final hash is then reduced modulo 101 to fit within a small hash table range. This method is efficient and produces well-distributed hashes for short strings.
+
+### Key Features
+
+- Implements a classic hash technique with modern Python syntax
+- Demonstrates modular hashing for use in small hash tables
+- Great for educational use in understanding string hashing mechanics
 
 ## Task 3: SHA-256 Padding Calculation
 ### Overview
@@ -54,18 +62,12 @@ This task demonstrates two methods of generating prime numbers:
 
 It calculates and prints the first 100 prime numbers using both approaches.
 
----
-
 ### Features
-
 - **Trial Division**: Checks each number for primality by testing divisibility up to its square root.
 - **Sieve of Eratosthenes**: Efficiently finds all primes up to a given range by marking non-primes.
 - Compares both methods by printing the first 100 prime numbers.
 
----
-
 ### Code Overview
-
 ####  Prime Check (Trial Division)
 
 ```python
@@ -297,6 +299,8 @@ The script performs the following steps:
 - `IPython.display` (for displaying the DataFrame in Jupyter Notebooks)
 
 ## References
+Lecturer notes and labs
+https://chatgpt.com/
 https://stackoverflow.com/questions/27176317/bitwise-rotate-right
 https://realpython.com/python-bitwise-operators/
 https://www.geeksforgeeks.org/python-bitwise-operators/
