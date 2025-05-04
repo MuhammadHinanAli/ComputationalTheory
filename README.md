@@ -344,20 +344,28 @@ The script performs the following steps:
 - `IPython.display` (for displaying the DataFrame in Jupyter Notebooks)
 
 ## References
-Lecturer notes and labs (All tasks)
-https://chatgpt.com/ (All tasks)
-https://stackoverflow.com/questions/27176317/bitwise-rotate-right (Task 1)
-https://realpython.com/python-bitwise-operators/  (Task 1)
-https://www.geeksforgeeks.org/python-bitwise-operators/ (Task 1)
-https://www.codeproject.com/Articles/32829/Hash-Functions-An-Empirical-Comparison (Task 2)
-https://www.partow.net/programming/hashfunctions/ (Task 2)
-https://www.geeksforgeeks.org/python-hash-method/ (Task 2)
-https://linux.ime.usp.br/~brelf/mac0499/monografia.pdf (Task 3)
-https://en.wikipedia.org/wiki/SHA-2 (Task 3)
-https://www.geeksforgeeks.org/python-program-to-check-whether-a-number-is-prime-or-not/ (Task 4)
-https://stackoverflow.com/questions/33006472/first-100-prime-numbers (Task 4 / Task 5)
-https://stackoverflow.com/questions/70793490/how-do-i-calculate-square-root-in-python (Task 5)
-https://stackoverflow.com/questions/71888646/counting-the-number-of-leading-zero-bits-in-a-sha256-encrpytion (Task 6)
-https://www.geeksforgeeks.org/turing-machine-introduction/ (Task 7)
-https://www.geeksforgeeks.org/bubble-sort-algorithm/ (Task 8)
-https://docs.python.org/3/library/itertools.html#itertools.permutations (Task 8)
+Lecturer notes and labs (All tasks)  
+https://chatgpt.com/ (All tasks)  
+
+https://stackoverflow.com/questions/27176317/bitwise-rotate-right (Task 1)  
+https://realpython.com/python-bitwise-operators/  (Task 1)  
+https://www.geeksforgeeks.org/python-bitwise-operators/ (Task 1)  
+
+https://www.codeproject.com/Articles/32829/Hash-Functions-An-Empirical-Comparison (Task 2)  
+https://www.partow.net/programming/hashfunctions/ (Task 2)  
+https://www.geeksforgeeks.org/python-hash-method/ (Task 2)  
+
+https://linux.ime.usp.br/~brelf/mac0499/monografia.pdf (Task 3)  
+https://en.wikipedia.org/wiki/SHA-2 (Task 3)  
+
+https://www.geeksforgeeks.org/python-program-to-check-whether-a-number-is-prime-or-not/ (Task 4)  
+https://stackoverflow.com/questions/33006472/first-100-prime-numbers (Task 4 / Task 5)  
+
+https://stackoverflow.com/questions/70793490/how-do-i-calculate-square-root-in-python (Task 5)  
+
+https://stackoverflow.com/questions/71888646/counting-the-number-of-leading-zero-bits-in-a-sha256-encrpytion (Task 6)  
+
+https://www.geeksforgeeks.org/turing-machine-introduction/ (Task 7)  
+
+https://www.geeksforgeeks.org/bubble-sort-algorithm/ (Task 8)  
+https://docs.python.org/3/library/itertools.html#itertools.permutations (Task 8)  
