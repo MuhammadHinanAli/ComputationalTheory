@@ -28,11 +28,153 @@ This repository contains a set of Python scripts and functions that address four
 ## Task 3: SHA-256 Padding Calculation
 
 ## Task 4: Calculating the First 100 Prime Numbers
+### Overview
+This task explores two classic algorithms for generating prime numbers: **Trial Division** and the **Sieve of Eratosthenes**. It demonstrates how each method works by generating the first 100 prime numbers. The Trial Division method checks each number individually for primality using division, while the Sieve of Eratosthenes efficiently marks non-primes in a range. This comparison helps illustrate the differences in efficiency and approach between brute-force and optimized algorithms in number theory.
+
+This task demonstrates two methods of generating prime numbers:
+1. Trial Division
+2. Sieve of Eratosthenes
+
+It calculates and prints the first 100 prime numbers using both approaches.
+
+---
+
+## 🔢 Features
+
+- **Trial Division**: Checks each number for primality by testing divisibility up to its square root.
+- **Sieve of Eratosthenes**: Efficiently finds all primes up to a given range by marking non-primes.
+- Compares both methods by printing the first 100 prime numbers.
+
+---
+
+## 📌 Code Overview
+
+### ✅ Prime Check (Trial Division)
+
+```python
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+```
+
+### 🧮 Generate Primes via Trial Division
+
+```python
+def primes_trial_division(limit):
+    primes = []
+    num = 2
+    while len(primes) < limit:
+        if is_prime(num):
+            primes.append(num)
+        num += 1
+    return primes
+```
+
+### 🔍 Generate Primes via Sieve of Eratosthenes
+
+```python
+def sieve_of_eratosthenes(n):
+    size = 600  # Safe upper bound to find 100+ primes
+    is_prime = [True] * size
+    is_prime[0] = is_prime[1] = False
+    for i in range(2, int(size**0.5) + 1):
+        if is_prime[i]:
+            for j in range(i*i, size, i):
+                is_prime[j] = False
+    primes = [i for i, val in enumerate(is_prime) if val]
+    return primes[:n]
+```
+
+---
+
+## 🖨 Output Example
+
+```python
+print("Trial Division:\n", primes_trial_division(100))
+print("\nSieve of Eratosthenes:\n", sieve_of_eratosthenes(100))
+```
+
+## ✅ Comparison Summary
+
+| Method               | Time Complexity  | Description                      |
+|----------------------|------------------|----------------------------------|
+| Trial Division       | O(n√n)           | Simple but slower for large `n`  |
+| Sieve of Eratosthenes| O(n log log n)   | Fast for large ranges            |
+
+## 📦 Requirements
+- No external libraries
 
 ## Task 5: Extracting 32 Bits of Fractional Parts of Square Roots for the First 100 Primes
+### Overview
+This task calculates the fractional part of the square root of prime numbers, scales them into the 32-bit integer range, and prints the result in hexadecimal format. This technique is similar to how constants are generated in cryptographic algorithms like SHA-256.
+- Generate the first 100 prime numbers.
+- Compute the square root of each prime.
+- Extract the fractional part.
+- Scale the fraction to a 32-bit integer.
+- Display results in hexadecimal format.
+
+### Code Explanation
+#### Function to Calculate Root Bits
+```python
+import math
+def get_root_bits(primes):
+    results = []
+    for p in primes:
+        root = math.sqrt(p)
+        frac = root % 1
+        bits = int(frac * (2**32))
+        results.append(bits)
+    return results
+```
+
+- Takes a list of prime numbers.
+- Computes the fractional part of their square roots.
+- Scales to 32-bit unsigned integers.
+
+#### Prime Generation
+```python
+def primes_trial_division(n):
+    primes = []
+    candidate = 2
+    while len(primes) < n:
+        is_prime = True
+        for p in primes:
+            if p * p > candidate:
+                break
+            if candidate % p == 0:
+                is_prime = False
+                break
+        if is_prime:
+            primes.append(candidate)
+        candidate += 1
+    return primes
+```
+
+#### Usage
+```python
+primes = primes_trial_division(100)
+root_bits = get_root_bits(primes)
+
+for i, bits in enumerate(root_bits):
+    print(f"Prime: {primes[i]} → 32-bit frac: {bits:#010x}")
+```
+
+### Output Format
+- Each line prints the prime number and the 32-bit scaled fractional bits in hex:
+  - `0x` prefix
+  - 8 hex digits
+  - Zero-padded
+
+## Requirements
+- Standard `math` module (no third-party libraries needed)
 
 ## Task 6: Finding Words with Maximum Leading Zero Bits in Their SHA256 Hash 
 ### Overview
+This task reads a list of words from a file (`words.txt`) and determines which word produces the most leading zero bits in its SHA-256 hash. This type of analysis is relevant in cryptography and proof-of-work systems, where hash properties (like leading zeros) are important.
 
 - Reads a word list from `words.txt`.
 - Filters out words that contain non-alphabetic characters.
