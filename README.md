@@ -1,6 +1,5 @@
 # **COMPUTATIONAL THEORY**
-
-This repository contains a set of Python scripts and functions that address four main tasks involving **bitwise operations**, **hash functions**, **SHA-256 padding**, and **prime-number computation**. Each task is described in detail below, along with references, test procedures, and example usage.
+The tasks and functions in this repository cover four primary tasks: **prime-number computation**, **hash functions**, **SHA-256 padding** and **bitwise operations**. Below is a detailed description of each task, with references, test methods, and usage examples.
 
 ## **Table of Contents**
 1. Task 1: Binary Representation (32-bit Bitwise Operations)
@@ -106,8 +105,6 @@ def sieve_of_eratosthenes(n):
     primes = [i for i, val in enumerate(is_prime) if val]
     return primes[:n]
 ```
-
----
 
 ### Output Example
 
